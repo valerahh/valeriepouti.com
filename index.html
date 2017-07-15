@@ -1,1 +1,130 @@
-<h1>Hello, World</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Valerie Pouti | UX Designer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://use.typekit.net/jqv5qkf.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <header class="mainHeader">
+      <h2 class="floatLeft">Valerie Pouti</h2>
+      <nav class="floatRight">
+        <a href="#work" class="workLink">work</a>
+        <a href="#skills" class="skillsLink">skills</a>
+        <a href="#about" class="aboutLink">about</a>
+        <a href="#resume" class="resumeLink">resume</a>
+      </nav>
+
+      <!--
+      <img src="images/hamburger-menu.svg" class="menuIcon floatRight" alt="menuIcon">
+    -->
+      <div class="clear"></div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h1>Hi, I'm Valerie.</h1>
+        <img src="images/dots-02.svg" alt="line-break-img" class="dotImg">
+        <p>It's nice to meet you.</p>
+        <p>I'm a UX Designer with a passion for creating usable and engaging products.</p>
+      </section>
+
+      <section id="work">
+        <header class="workHeader sectionHeader overlay">
+
+          <h3>Work</h3>
+        </header>
+
+        <div class="workContent">
+          <h4>Recent Projects</h4>
+          <img src="images/woof-desktop.png" class="floatLeft workImg">
+          <article class="floatRight textBox">
+            <h5>Woof Smart Collar</h5>
+            <p>This was a project on which I worked with a team to create mobile and desktop application prototypes to accompany a fictional smart dog collar product.</p>
+            <p>Prototypes ranged from rough pen and paper sketches to full-fidelity prototypes created using Axure.
+          </article>
+          <div class="clear"></div>
+          <img src="images/woof-midfi.png" class="floatRight workImg">
+          <article class="floatLeft textBox">
+            <p>We conducted user testing throughout development, continuing to collect research through our mid-fidelity (right) and high-fidelity prototypes.</p>
+            <p>Check out the finished prototypes <a href="http://uwkysn.axshare.com" target="_blank">here</a> and <a href="http://7wgvp7.axshare.com/" target="_blank">here</a>.
+          </article>
+          <div class="clear"></div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <header class="skillsHeader sectionHeader overlay">
+
+          <h3>Skills</h3>
+        </header>
+        <div class="skillsContent">
+          <h4>Skills and Expertise</h4>
+          <img src="images/skills-img-03.png" class="skillsImg" alt="Skills">
+          <p>I'm currently a Web Production Specialist at Rakuten Marketing, focusing primarily on e-mail web design and development (yeah, I'm one of those people).</p>
+          <p>I am competent in HTML/CSS and use these languages on a daily basis. Additionally, I have experience making creative assets, including banner images for newsletters/blog posts and infographics.</p>
+          <p>When it comes to prototyping, I prefer using HTML, Axure, or InVision to create high-fidelity mock-ups.</p>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="aboutWrapper">
+        <header class="aboutHeader sectionHeader overlay">
+
+          <h3>About</h3>
+        </header>
+        <div class="aboutContent">
+          <h4>About Me</h4>
+          <img src="images/barbette.jpg" alt="Valerie at Barbette in Minneapolis" class="aboutImg">
+          <p>I specialize in people. With an undergraduate degree in psychology, I have a deep understanding of the human mind and how people think. In particular, I am interested in how these principles influence design needs. I believe this foundation of knowledge and experience makes me an ideal UX practicioner.</p>
+          <p>I'm a native Minnesotan currently living in the Chicago area. I love traveling, taking photos on my 35mm film camera, doing the occasional sudoku puzzle, and snuggling with my dog Jack.</p>
+        </div>
+        </div>
+        <div class="sectionContent">
+
+        </div>
+      </section>
+
+      <section id="resume">
+        <a href="skills_resume.pdf" target="_blank">
+        <header class="resumeHeader sectionHeader overlay">
+
+          <h3>Resume</h3>
+        </header>
+      </a>
+      </section>
+    </main>
+
+    <footer>
+      <h4>Contact</h4>
+      <div>
+        <a class="emailButton" href="mailto:vpouti@gmail.com">Email Me</a>
+      </div>
+      <div>
+        <a href="https://www.linkedin.com/in/valerie-pouti-300557108" target="_blank"><img src="images/LinkedIn-Icon.png" alt="Linked In" class="linkedImg"></a>
+      </div>
+      <p>&copy; Valerie Pouti 2017</p>
+    </footer>
+    <script>
+
+      $(".workHeader").on("click", function(){
+        $(".workContent").toggle(400);
+      });
+
+      $(".skillsHeader").on("click", function(){
+        $(".skillsContent").toggle(400);
+      });
+
+      $(".aboutHeader").on("click", function(){
+        $(".aboutContent").toggle(400);
+      });
+
+    </script>
+  </body>
+</html>
