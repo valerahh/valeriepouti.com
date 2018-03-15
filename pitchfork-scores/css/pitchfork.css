@@ -1,0 +1,315 @@
+svg {
+    font: 10px sans-serif;
+    shape-rendering: crispEdges;
+    position: auto;
+    overflow: visible;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+}
+
+.axis text {
+    font-size: 13px;
+}
+
+path.domain {
+    stroke: none;
+}
+
+.y .tick line {
+    stroke: #ddd;
+}
+
+.x .tick line {
+    stroke: #fff;
+}
+
+h1 {
+    font-family: sans-serif;
+    width: 940px;
+    align-content: center;
+    text-align: center;
+    padding: 20 20 20 20;
+}
+
+p#intro {
+    width: 780px;
+    margin-left: 100px;
+    margin-right: 150px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.segmented-control {
+    position: absolute;
+    display: inherit;
+    border: 1px solid currentColor;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    overflow: hidden;
+    /*            margin: 1em auto 1em auto;*/
+    margin-left: 150px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -moz-transition-duration: 0.6s;
+    -o-transition-duration: 0.6s;
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+    -moz-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    -o-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    -webkit-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.segmented-control > input {
+    position: absolute;
+    left: 100px;
+    opacity: 0;
+}
+
+.segmented-control > input[type='checkbox'] ~ label {
+    -moz-transition-duration: 0;
+    -o-transition-duration: 0;
+    -webkit-transition-duration: 0;
+    transition-duration: 0;
+}
+
+.segmented-control > input[type='checkbox'] ~ label:before {
+    opacity: 0;
+}
+
+
+
+.segmented-control > input:nth-child(1):checked ~ label:nth-of-type(1):after,
+.segmented-control > input:nth-child(1):checked ~ label:nth-of-type(1):before {
+    opacity: 1;
+}
+
+
+.segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(1):after,
+.segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(1):before,
+.segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(1) ~ label:after,
+.segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(1) ~ label:before {
+    left: 0%;
+}
+
+.segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(2):after,
+.segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(2):before,
+.segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(2) ~ label:after,
+.segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(2) ~ label:before {
+    left: 0%;
+}
+
+.segmented-control > input:nth-child(2):checked ~ label:nth-of-type(2):after,
+.segmented-control > input:nth-child(2):checked ~ label:nth-of-type(2):before {
+    opacity: 1;
+}
+
+.segmented-control > input:nth-child(2):checked ~ label:first-of-type:nth-last-of-type(2):after,
+.segmented-control > input:nth-child(2):checked ~ label:first-of-type:nth-last-of-type(2):before,
+.segmented-control > input:nth-child(2):checked ~ label:first-of-type:nth-last-of-type(2) ~ label:after,
+.segmented-control > input:nth-child(2):checked ~ label:first-of-type:nth-last-of-type(2) ~ label:before {
+    left: 50%;
+}
+
+.segmented-control > label {
+    display: inline-block;
+    padding: 0 .71em;
+    cursor: pointer;
+    float: left;
+    line-height: 3em;
+    font-style: inherit;
+    font-weight: inherit;
+    text-decoration: inherit;
+    -moz-transition-property: none;
+    -o-transition-property: none;
+    -webkit-transition-property: none;
+    transition-property: none;
+    -moz-transition-duration: inherit;
+    -o-transition-duration: inherit;
+    -webkit-transition-duration: inherit;
+    transition-duration: inherit;
+    -moz-transition-timing-function: inherit;
+    -o-transition-timing-function: inherit;
+    -webkit-transition-timing-function: inherit;
+    transition-timing-function: inherit;
+}
+
+.segmented-control > label:before,
+.segmented-control > label:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.segmented-control > label:after {
+    color: white;
+    content: attr(data-value);
+    text-align: center;
+    padding: inherit;
+    z-index: 10;
+    font-style: inherit;
+    text-decoration: inherit;
+    font-weight: inherit;
+    opacity: 0;
+    -moz-transition-property: opacity, left;
+    -o-transition-property: opacity, left;
+    -webkit-transition-property: opacity, left;
+    transition-property: opacity, left;
+    -moz-transition-duration: inherit;
+    -o-transition-duration: inherit;
+    -webkit-transition-duration: inherit;
+    transition-duration: inherit;
+    -moz-transition-timing-function: inherit;
+    -o-transition-timing-function: inherit;
+    -webkit-transition-timing-function: inherit;
+    transition-timing-function: inherit;
+}
+
+.segmented-control > label:after,
+.segmented-control > label {
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.segmented-control > label:before {
+    content: '';
+    color: inherit;
+    background: currentColor;
+    -moz-transition-property: left;
+    -o-transition-property: left;
+    -webkit-transition-property: left;
+    transition-property: left;
+    -moz-transition-duration: inherit;
+    -o-transition-duration: inherit;
+    -webkit-transition-duration: inherit;
+    transition-duration: inherit;
+    -moz-transition-timing-function: inherit;
+    -o-transition-timing-function: inherit;
+    -webkit-transition-timing-function: inherit;
+    transition-timing-function: inherit;
+}
+
+.segmented-control > label:first-of-type:nth-last-of-type(1),
+.segmented-control > label:first-of-type:nth-last-of-type(1):after,
+.segmented-control > label:first-of-type:nth-last-of-type(1):before,
+.segmented-control > label:first-of-type:nth-last-of-type(1) ~ label,
+.segmented-control > label:first-of-type:nth-last-of-type(1) ~ label:after,
+.segmented-control > label:first-of-type:nth-last-of-type(1) ~ label:before {
+    width: 100%;
+}
+
+.segmented-control > label:first-of-type:nth-last-of-type(2),
+.segmented-control > label:first-of-type:nth-last-of-type(2):after,
+.segmented-control > label:first-of-type:nth-last-of-type(2):before,
+.segmented-control > label:first-of-type:nth-last-of-type(2) ~ label,
+.segmented-control > label:first-of-type:nth-last-of-type(2) ~ label:after,
+.segmented-control > label:first-of-type:nth-last-of-type(2) ~ label:before {
+    width: 50%;
+}
+
+html {
+    font-family: 'Source Sans Pro', Helvetica, arial, sans-serif;
+    /*           */
+    letter-spacing: .04em;
+    color: #000000;
+    cursor: default;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    position: auto;
+    width: 950px;
+    height: 70px;
+    text-align: center;
+    margin-left: 150;
+    margin-right: 150;
+    margin-bottom: 150;
+    padding: 0 4em;
+}
+
+body {
+    width: 840px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#graph {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #EEE;
+}
+
+#clickDetails {
+    margin-left: 45px;
+    margin-bottom: 20px;
+}
+
+#genreHeader {
+    width: 800px;
+}
+
+#tableContainer {
+    height: 400px;
+    overflow: auto;
+}
+
+h2 {
+    color: #000;
+    font-size: 24px;
+    text-align: center;
+}
+
+tr:nth-child(2n) {
+    background-color: #f7f7f7;
+}
+
+td {
+    width: 400px;
+    border: 1px solid #EEE;
+}
+
+td:first-child {
+    width: 290px;
+}
+
+td:last-child {
+    width: 70px;
+}
+
+#scoreDetails {
+    color: #000;
+    font-size: 12px;
+    border-collapse: collapse;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <title>Best and Worst of Pitchfork</title>
+    <LINK href="css/pitchfork.css" rel="stylesheet" type="text/css">
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+</head>
+
+<body>
+
+    <h1>The Best and Worst of Pitchfork</h1>
+    <p id="intro">From 1999 to 2016, online music magazine Pitchfork reviewed over 18,000 albums. These graphs break down the reviews that received the top and bottom 5% of scores per genre in this time period. Scores range on a scale from 0 (the worst) to 10 (the best), and are grouped together in the graph by whole number score.
+        <br><br>
+        <em>Click a section on the graph to see which works earned those scores.</em></p>
+
+    <div class="container">
+        <form class="segmented-control" style="width: 500px; color: #000000;">
+            <input type="radio" name="scgraphs" id="seeBest" checked>
+            <input type="radio" name="scgraphs" id="seeWorst">
+            <label for="seeBest" data-value="Best of Pitchfork">Best of Pitchfork</label>
+            <label for="seeWorst" data-value="Worst of Pitchfork">Worst of Pitchfork</label>
+
+        </form>
+    </div>
+    <div id="graph"></div>
+
+    <div id="clickDetails">
+        <div id="genreHeader"></div>
+        <div id="tableContainer">
+            <table id="scoreDetails" cellspacing="0" cellpadding="5">
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <script src="js/BestAndWorst.js">
+    </script>
+
+
+</body>
+
+</html>
