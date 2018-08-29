@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Expenses</title>
+
+<style>
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700';
+
+body {
+	font-family: 'Open Sans', Arial, sans-serif;
+	margin: 0px;
+	font-size: 16px;
+}
+header {
+	width: 100%;
+	margin: 0 auto;
+	background-color: #D3D3D3;
+	border-bottom: 1px #000 solid;
+	color: black;
+	position: fixed;
+	top: 0px;
+	padding: 30px 0px;
+}
+#logo {
+	padding-left: 15px;
+	font-size: 24px;
+	font-weight: 700;
+}
+#profileHeader {
+	padding-right: 15px;
+	font-size: 20px;
+}
+#sessionSummary {
+	width: 375px;
+	margin: 0 auto;
+	vertical-align: middle;
+	padding: 20px;
+}
+#expenseForms {
+	border-right: 1px #555555 solid;
+	padding-right: 40px;
+}
+h2, h4 {
+	text-align: center;
+}
+input[type=submit], button {
+	font-family: 'Open Sans', Arial, sans-serif;
+	padding: 10px 25px;
+	background-color: #6bc773;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	border: 0;
+}
+.submitContainer {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 25px;
+}
+textarea[name=comments] {
+	height: 100px;
+	width: 200px;
+	vertical-align: text-top;
+}
+img {
+	vertical-align: middle;
+}
+form[name=expenseEntry2] {
+	display: none;
+}
+.container {
+	width: 890px;
+	margin: 25px auto 25px auto;
+	padding: 80px 20px 20px 20px;
+}
+#addExpenses {
+	overflow: hidden;
+}
+.floatLeft {
+	float: left;
+}
+.floatRight {
+	float: right;
+}
+.submittedExpense {
+	font-weight: 700;
+	background-color: #D3D3D3;
+	padding: 5px;
+}
+.pendingExpense {
+	font-weight: 700;
+	background-color: #ffffcc;
+	padding: 3px;
+}
+.paidExpense {
+	font-weight: 700;
+	background-color: #adebad;
+	padding: 5px;
+}
+table, td {
+	border: 1px #000 solid;
+	border-collapse: collapse;
+	text-align: center;
+	padding: 5px;
+	font-size: 14px;
+}
+td a {
+	color: #0b0dec;
+	font-size: 12px;
+	text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+	<header>
+		<div id="logo" class="floatLeft">Expense Buddy</div>
+		<div id="profileHeader" class="floatRight"><img src="./images/user_icon.svg" width="25"> Jane Doe</div>
+	</header>
+
+	<div class="container">
+		<main>
+
+			<div id="addExpenses">
+
+				<h2>Add Expenses</h2>
+
+				<div id="expenseForms" class="floatLeft">
+					<form name="expenseEntry1">
+						<input type="radio" name="for" value="me">For Me&nbsp;&nbsp;&nbsp;
+						<input type="radio" name="for" value="someoneElse">For Someone Else&nbsp;&nbsp;&nbsp;
+						<input type="text" name="who"><br><br>
+						Date Range: <input type="date" name="startDate">&nbsp; to&nbsp;&nbsp;<input type="date" name="endDate"><br><br>
+						Description: <input type="text" name="description"><br><br>
+						Cost: $<input type="number" name="cost"><br><br>
+						<input type="file" name="file"><br><br>
+						Add Comment (optional): <textarea name="comments"></textarea><br><br>
+						<a href="#"><img src="./images/notification_add.png" width="25"></a>&nbsp;Add to Session
+					</form>
+
+					<br>
+
+					<form name="expenseEntry2">
+						<input type="radio" name="for" value="me">For Me&nbsp;&nbsp;&nbsp;
+						<input type="radio" name="for" value="someoneElse">For Someone Else&nbsp;&nbsp;&nbsp;
+						<input type="text" name="who"><br><br>
+						Description: <input type="text" name="description"><br><br>
+						Date Range: <input type="date" name="startDate">&nbsp; to <input type="date" name="endDate"><br><br>
+						Cost: $<input type="number" name="cost"><br><br>
+						<input type="file" name="file"><br><br>
+						Add Comment (optional): <input type="text" name="comments">
+					</form>
+				</div>
+
+				<div id="sessionSummary" class="floatRight">
+					<h4>Session Summary</h4>
+					Expense Entries: <strong>3</strong>
+					<br>
+					<br>
+					<table>
+						<tr>
+							<td>Jane Doe</td>
+							<td>1/12/16</td>
+							<td>Airfare </td>
+							<td>$155.55</td>
+							<td><a href="#">Edit</a></td>
+							<td><a href="#">Delete</a></td>
+						</tr>
+						<tr>
+							<td>Jane Doe</td>
+							<td>1/12/16</td>
+							<td>Dinner</td>
+							<td>$70.98</td>
+							<td><a href="#">Edit</a></td>
+							<td><a href="#">Delete</a></td>
+						</tr>
+						<tr>
+							<td>John Smith</td>
+							<td>1/13/16</td>
+							<td>Taxi</td>
+							<td>$46.02</td>
+							<td><a href="#">Edit</a></td>
+							<td><a href="#">Delete</a></td>
+						</tr>
+					</table>
+					<br>
+					Current Expense Total: <strong>$272.55</strong>
+					<div class="submitContainer">
+						<input type="submit" name="submit">
+					</div>
+				</div>
+
+			</div>
+
+			<hr>
+
+			<div id="reviewExpenses">
+
+				<h2>Review Expenses</h2>
+				<div id="userReview">
+					<h3>Jane Doe's Expenses</h3>
+					<div class="submittedExpense">Submitted</div>
+					<ul>
+						<li>1/5/16 Airfare $245.89</li>
+						<li>1/5/16 Hotel $159.99</li>
+					</ul>
+					<div class="pendingExpense">Pending</div>
+					<ul>
+						<li>12/5/16 Dinner $160.78</li>
+					</ul>
+					<div class="paidExpense">Paid</div>
+					<ul>
+						<li>12/4/16 Airfare $123.34</li>
+					</ul>
+				</div>
+
+				<div id="othersReview">
+					<h3>Others' Expenses</h3>
+					<div class="submittedExpense">Submitted</div>
+					<ul>
+						<li>John Smith - 1/6/16 Airfare $233.86</li>
+						<li>John Smith - 1/6/16 Hotel $166.99</li>
+					</ul>
+					<div class="pendingExpense">Pending</div>
+					<ul>
+						<li>None</li>
+					</ul>
+					<div class="paidExpense">Paid</div>
+					<ul>
+						<li>John Smith - 12/4/16 Airfare $123.34</li>
+					</ul>
+				</div>
+
+			</div>
+
+		</main>
+	</div>
+</body>
+</html>
