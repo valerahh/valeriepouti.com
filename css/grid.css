@@ -1,0 +1,73 @@
+.grid-row {
+  margin: 0 -1%;
+}
+
+.grid-row::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.grid-col-1,
+.grid-col-2,
+.grid-col-3,
+.grid-col-4,
+.grid-col-5,
+.grid-col-6,
+.grid-col-7,
+.grid-col-8,
+.grid-col-9,
+.grid-col-10,
+.grid-col-11,
+.grid-col-12 {
+  float: left;
+  margin: 0 1%;
+}
+
+.grid-col-1 {
+  width: 6.3333%
+}
+
+.grid-col-2 {
+  width: 14.6666%;
+}
+
+.grid-col-3 {
+  width: 23%;
+}
+
+.grid-col-4 {
+  width: 31.3333%;
+}
+
+.grid-col-5 {
+  width: 39.6666%;
+}
+
+.grid-col-6 {
+  width: 48%;
+}
+
+.grid-col-7 {
+  width: 56.3333%;
+}
+
+.grid-col-8 {
+  width: 64.6666%;
+}
+
+.grid-col-9 {
+  width: 73%;
+}
+
+.grid-col-10 {
+  width: 81.3333%;
+}
+
+.grid-col-11 {
+  width: 89.6666%;
+}
+
+.grid-col-12 {
+  width: 98%;
+}

@@ -270,12 +270,13 @@ h5 {
   position: relative;
 }
 
-.workContent {
+/* TODO remove this */
+/* .workContent {
   max-width: 750px;
   margin: 0 auto;
   text-align: center;
   padding: 20px 0px 40px 0px;
-}
+} */
 
 .workImg {
   max-width: 320px;
@@ -333,4 +334,10 @@ h5 {
 p a {
   text-decoration: none;
   color: #349565;
+}
+
+.site-container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 25px;
 }
