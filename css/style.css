@@ -65,16 +65,19 @@ nav a {
   font-family: "freight-text-pro", serif;
   font-size: 1.3em;
   font-weight: 300;
-  color: #192A30;
-  text-decoration: none;
   font-style: italic;
   letter-spacing: 2px;
   padding: 5px 12px;
 }
 
-.workLink:hover {
-  border-bottom: 2px solid #192A30;
+header a {
+  text-decoration: none;
+  color: #192A30;
+}
 
+.workLink:hover,
+.workLink-active {
+  border-bottom: 2px solid #192A30;
 }
 
 .skillsLink:hover {
@@ -87,6 +90,10 @@ nav a {
 
 .resumeLink:hover {
   border-bottom: 2px solid #F0C2B0;
+}
+
+.logo:hover {
+  opacity: 0.5;
 }
 
 .menuIcon {
@@ -263,13 +270,13 @@ h5 {
   position: relative;
 }
 
-.workContent {
+/* TODO remove this */
+/* .workContent {
   max-width: 750px;
   margin: 0 auto;
   text-align: center;
   padding: 20px 0px 40px 0px;
-  display: none;
-}
+} */
 
 .workImg {
   max-width: 320px;
@@ -327,4 +334,10 @@ h5 {
 p a {
   text-decoration: none;
   color: #349565;
+}
+
+.site-container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 25px;
 }
